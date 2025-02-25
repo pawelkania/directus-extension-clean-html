@@ -1,0 +1,53 @@
+{
+	"name": "@aquasite_pl/directus-extension-clean-html",
+	"version": "1.0.0",
+	"description": "Clean HTML extension for Directus",
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-extension-operation"
+	],
+	"homepage": "https://github.com/pawelkania/directus-extension-clean-html#readme",
+	"bugs": {
+		"url": "https://github.com/pawelkania/directus-extension-clean-html/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pawelkania/directus-extension-clean-html.git"
+	},
+	"license": "MIT",
+	"author": "Paweł Kania",
+	"type": "module",
+	"main": "/dist/app.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "directus-extension build",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link"
+	},
+	"dependencies": {
+		"cheerio": "^1.0.0-rc.12"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "13.0.1",
+		"@types/cheerio": "^0.22.35",
+		"@types/node": "^22.13.5",
+		"typescript": "^5.7.3",
+		"vue": "^3.5.13"
+	},
+	"icon": "extension",
+	"directus:extension": {
+		"type": "operation",
+		"path": {
+			"app": "dist/app.js",
+			"api": "dist/api.js"
+		},
+		"source": {
+			"app": "src/app.ts",
+			"api": "src/api.ts"
+		},
+		"host": "^10.10.0"
+	}
+}
