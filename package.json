@@ -1,6 +1,6 @@
 {
 	"name": "@aquasite_pl/directus-extension-clean-html",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Clean HTML extension for Directus",
 	"keywords": [
 		"directus",
